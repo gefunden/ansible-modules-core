@@ -110,7 +110,10 @@ def normalize_permissions(p):
         if char == 'w':
             perms[1] = 'w'
         if char == 'x':
+          if perms[2] != 'X':
             perms[2] = 'x'
+        if char == 'X':
+            perms[2] = 'X'
     return ''.join(perms)
 
 def split_entry(entry):
